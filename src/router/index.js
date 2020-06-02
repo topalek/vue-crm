@@ -22,12 +22,6 @@ const routes = [{
     component: () =>
         import ('../views/Register.vue')
 }, {
-    path: "/planing",
-    name: "Planing",
-    meta: { layout: 'main' },
-    component: () =>
-        import ('../views/Planing.vue')
-}, {
     path: "/history",
     name: "History",
     meta: { layout: 'main' },
