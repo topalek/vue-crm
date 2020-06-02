@@ -34,11 +34,11 @@ const routes = [{
     component: () =>
         import ('../views/History.vue')
 }, {
-    path: "/detail-record",
-    name: "DetailRecord",
+    path: "/detail",
+    name: "Detail",
     meta: { layout: 'main' },
     component: () =>
-        import ('../views/DetailRecord.vue')
+        import ('../views/Detail.vue')
 }, {
     path: "/profile",
     name: "Profile",
@@ -52,11 +52,11 @@ const routes = [{
     component: () =>
         import ('../views/Record.vue')
 }, {
-    path: "/planing",
-    name: "Planing",
+    path: "/planning",
+    name: "Planning",
     meta: { layout: 'main' },
     component: () =>
-        import ('../views/Planing.vue')
+        import ('../views/Planning.vue')
 }];
 
 const router = new VueRouter({
