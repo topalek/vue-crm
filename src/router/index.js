@@ -7,6 +7,7 @@ Vue.use(VueRouter);
 const routes = [{
     path: "/",
     name: "Home",
+    meta: { layout: 'main' },
     component: Home
 }, {
     path: "/login",
@@ -15,11 +16,47 @@ const routes = [{
     component: () =>
         import ('../views/Login.vue')
 }, {
-    path: "/categories",
-    name: "Categories",
+    path: "/register",
+    name: "register",
+    meta: { layout: 'empty' },
+    component: () =>
+        import ('../views/Register.vue')
+}, {
+    path: "/planing",
+    name: "Planing",
     meta: { layout: 'main' },
     component: () =>
-        import ('../views/Categories.vue')
+        import ('../views/Planing.vue')
+}, {
+    path: "/history",
+    name: "History",
+    meta: { layout: 'main' },
+    component: () =>
+        import ('../views/History.vue')
+}, {
+    path: "/detail-record",
+    name: "DetailRecord",
+    meta: { layout: 'main' },
+    component: () =>
+        import ('../views/DetailRecord.vue')
+}, {
+    path: "/profile",
+    name: "Profile",
+    meta: { layout: 'main' },
+    component: () =>
+        import ('../views/Profile.vue')
+}, {
+    path: "/record",
+    name: "Record",
+    meta: { layout: 'main' },
+    component: () =>
+        import ('../views/Record.vue')
+}, {
+    path: "/planing",
+    name: "Planing",
+    meta: { layout: 'main' },
+    component: () =>
+        import ('../views/Planing.vue')
 }];
 
 const router = new VueRouter({
