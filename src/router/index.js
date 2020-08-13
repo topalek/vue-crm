@@ -3,66 +3,67 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-const routes = [{
+const routes = [
+  {
     path: "/",
-    name: "Home",
-    meta: { layout: 'main' },
-    component: () =>
-        import ('../views/Home.vue')
-},{
+    name: "home",
+    meta: {layout: "main"},
+    component: () => import("../views/Home.vue")
+  },
+  {
     path: "/login",
-    name: "Login",
-    meta: { layout: 'empty' },
-    component: () =>
-        import ('../views/Login.vue')
-}, {
+    name: "login",
+    meta: {layout: "empty"},
+    component: () => import("../views/Login.vue")
+  },
+  {
     path: "/register",
     name: "register",
-    meta: { layout: 'empty' },
-    component: () =>
-        import ('../views/Register.vue')
-}, {
+    meta: {layout: "empty"},
+    component: () => import("../views/Register.vue")
+  },
+  {
     path: "/history",
-    name: "History",
-    meta: { layout: 'main' },
-    component: () =>
-        import ('../views/History.vue')
-}, {
+    name: "history",
+    meta: {layout: "main"},
+    component: () => import("../views/History.vue")
+  },
+  {
     path: "/categories",
-    name: "Categories",
-    meta: { layout: 'main' },
-    component: () =>
-        import ('../views/Categories.vue')
-}, {
+    name: "categories",
+    meta: {layout: "main"},
+    component: () => import("../views/Categories.vue")
+  },
+  {
     path: "/detail",
-    name: "Detail",
-    meta: { layout: 'main' },
-    component: () =>
-        import ('../views/Detail.vue')
-}, {
+    name: "detail",
+    meta: {layout: "main"},
+    component: () => import("../views/Detail.vue")
+  },
+  {
     path: "/profile",
-    name: "Profile",
-    meta: { layout: 'main' },
-    component: () =>
-        import ('../views/Profile.vue')
-}, {
+    name: "profile",
+    meta: {layout: "main"},
+    component: () => import("../views/Profile.vue")
+  },
+  {
     path: "/record",
-    name: "Record",
-    meta: { layout: 'main' },
-    component: () =>
-        import ('../views/Record.vue')
-}, {
+    name: "record",
+    meta: {layout: "main"},
+    component: () => import("../views/Record.vue")
+  },
+  {
     path: "/planning",
-    name: "Planning",
-    meta: { layout: 'main' },
-    component: () =>
-        import ('../views/Planning.vue')
-}];
+    name: "planning",
+    meta: {layout: "main"},
+    component: () => import("../views/Planning.vue")
+  }
+];
 
 const router = new VueRouter({
-    mode: "history",
-    base: process.env.BASE_URL,
-    routes
+  mode: "history",
+  base: process.env.BASE_URL,
+  routes
 });
 
 export default router;
