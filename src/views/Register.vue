@@ -43,7 +43,7 @@
         <small
             class="helper-text invalid"
             v-else-if="$v.password.$dirty && !$v.password.minLength"
-        >Пароль должен быть более 6 символов</small
+        >Пароль должен быть более {{ $v.password.$params.minLength.min }} символов</small
         >
       </div>
       <div class="input-field">
@@ -64,7 +64,7 @@
         <small
             class="helper-text invalid"
             v-else-if="$v.name.$dirty && !$v.name.minLength"
-        >Имя должно быть более 2х символов</small
+        >Имя должно быть более {{ $v.name.$params.minLength.min }} символов</small
         >
       </div>
       <p>
