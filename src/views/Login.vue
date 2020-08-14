@@ -26,7 +26,14 @@
         >
       </div>
       <div class="input-field">
-        <input id="password" type="password" v-model.trim="password"/>
+        <input
+            :class="{
+            invalid: $v.password.$dirty && !$v.password.required
+          }"
+            id="password"
+            type="password"
+            v-model.trim="password"
+        />
         <label for="password">Пароль</label>
         <small
             class="helper-text invalid"
@@ -36,7 +43,7 @@
         <small
             class="helper-text invalid"
             v-else-if="$v.password.$dirty && !$v.password.minLength"
-        >Пароль ljk</small
+        >Пароль должен быть более 6 символов</small
         >
       </div>
     </div>
