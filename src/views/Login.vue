@@ -36,7 +36,7 @@
         <small
             class="helper-text invalid"
             v-else-if="$v.password.$dirty && !$v.password.minLength"
-        >Пароль ljk</small
+        >Пароль должен быть более {{$v.password.$params.minLength.min}} символов</small
         >
       </div>
     </div>
@@ -75,6 +75,11 @@ export default {
         this.$v.$touch();
         return;
       }
+      const formData = {
+        email: this.email,
+        password: this.password
+      }
+      console.log(formData);
       this.$router.push("/");
     }
   }
