@@ -26,7 +26,14 @@
         >
       </div>
       <div class="input-field">
-        <input id="password" type="password" v-model.trim="password"/>
+        <input
+            :class="{
+            invalid: $v.password.$dirty && !$v.password.required
+          }"
+            id="password"
+            type="password"
+            v-model.trim="password"
+        />
         <label for="password">Пароль</label>
         <small
             class="helper-text invalid"
